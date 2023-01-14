@@ -1,0 +1,48 @@
+{
+  "quiz": {
+    "quizId": "hfhu3",
+    "title": "What are you?",
+    "subtitle": "who are you lol...",
+    "questions": [
+      {
+        "id": 0,
+        "text": "Pick a ....",
+        "options": [
+          {
+            "text": "New York",
+            "image": "",
+            "alt": "",
+            "credit": ""
+          },
+          {
+            "text": "Boston",
+            "image": "",
+            "alt": "",
+            "credit": ""
+          },
+          {
+            "text": "LA",
+            "image": "",
+            "alt": "",
+            "credit": ""
+          },
+          {
+            "text": "Huston",
+            "image": "",
+            "alt": "",
+            "credit": ""
+          }
+        ]
+      }
+    ],
+    "answers": [
+      {
+        "combination": [],
+        "text": "Blue Cheese",
+        "image": "",
+        "alt": "",
+        "credit": ""
+      }
+    ]
+  }
+}
