@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
 
-function Title() {
-    return ( <div>
-        <h1>Buzzfeed Quiz</h1>
-    </div> );
+function Title({ title, subtitle }) {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
+    </div>
+  );
 }
 
 export default Title;
