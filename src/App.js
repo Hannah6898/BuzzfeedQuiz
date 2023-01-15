@@ -4,9 +4,10 @@ import AnswerBlock from "./components/AnswerBlock";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [quiz, setQuiz] = useState(false);
+  const [quiz, setQuiz] = useState(null);
   const [chosenAnswerItems, setChosenAnswerItems] = useState([]);
   const [unansweredQuestionIds, setUnansweredQuestionIds] = useState(null);
+  const [showAnswer, setShowAnswer] = useState(false);
 
   const fetchData = async () => {
     try {
@@ -22,11 +23,8 @@ function App() {
     fetchData();
   }, []);
 
-  console.log(unansweredQuestionIds)
-console.log("hi")
   useEffect(() => {
-    const unansweredIds = quiz && quiz?.questions?.map(({id}) => id);
-    console.log(unansweredIds)
+    const unansweredIds = quiz?.questions?.map(({id}) => id);
     setUnansweredQuestionIds(unansweredIds);
   }, [quiz]);
 
@@ -36,19 +34,22 @@ console.log("hi")
     if(unansweredQuestionIds){
       if(unansweredQuestionIds.length<=0 &&chosenAnswerItems.length >=1){
         //scroll to answer block
+        setShowAnswer(true)
+        const answerBlock = document.getElementById("answer-block")
+        answerBlock?.scrollIntoView({behavior:"smooth"})
       }
       //scroll to highest unanweredQuestionId 
       const highestId = Math.min(...unansweredQuestionIds)
       const highestElement = document.getElementById(highestId)
       highestElement?.scrollIntoView({behavior:"smooth"})
     }
-  },[unansweredQuestionIds, chosenAnswerItems])
+  },[unansweredQuestionIds, chosenAnswerItems, showAnswer])
 
   return (
     <div className="app">
       <Title title={quiz?.title} subtitle={quiz?.subtitle} />
-      {quiz &&
-        quiz?.questions.map((questionsItem) => (
+      {
+        quiz?.questions?.map((questionsItem) => (
           <QuestionsBlock
             key={questionsItem.id}
             quizItem={questionsItem}
@@ -58,6 +59,7 @@ console.log("hi")
             setUnansweredQuestionIds={setUnansweredQuestionIds}
           />
         ))}
+        {showAnswer &&(<AnswerBlock answerOptions={quiz?.answers} chosenAnswers={chosenAnswerItems}/>)}
     </div>
   );
 }
