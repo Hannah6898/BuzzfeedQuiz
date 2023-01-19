@@ -20,8 +20,7 @@ function OptionsBlock({ options, setChosenAnswerItems, chosenAnswerItems, unansw
       <img src={options.image} alt={options.alt}></img>
       <h3>{options.text}</h3>
       <p>
-        <a href={options.image}>{options.credit}</a>
-        <a href="unslash">Unsplash</a>
+        <a href="https://www.tesco.com/">{options.credit}</a>
       </p>
     </button>
   );

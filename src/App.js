@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="app">
-      <Title title={quiz?.title} subtitle={quiz?.subtitle} />
+      <Title title={quiz?.title}/>
       {
         quiz?.questions?.map((questionsItem) => (
           <QuestionsBlock

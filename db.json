@@ -1,8 +1,7 @@
 {
   "quiz": {
     "quizId": "hfhu3",
-    "title": "Buy A Tesco Meal Deal And We'll Decide What Streaming Service Matches Your Personality",
-    "subtitle": "who are you lol...",
+    "title": "Buy A Tesco Meal Deal And We'll Decide What Streaming Service Matches Your Personality...",
     "questions": [
       {
         "id": 0,
@@ -46,7 +45,7 @@
           },
           {
             "text": "Propercorn Sweet & Salty",
-            "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/d1a1827d-d203-4615-ad44-5cd80c60ecb5/79791eb8-52f0-45d4-b156-c36855049c18_864884328.jpeg?h=200&w=200",
+            "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/8b3e97b8-4361-4fcf-a84d-fe8780f4f2c5/89498da5-fcee-4db1-8809-607d23f34a90_448183846.jpeg?h=200&w=200",
             "alt": "Propercorn Sweet & Salty",
             "credit": "Tesco"
           },
