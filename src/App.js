@@ -11,7 +11,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const reponse = await fetch("http://localhost:8000/quiz");
+      const reponse = await fetch("https://buzzfeed-app-data.herokuapp.com/quiz");
       const json = await reponse.json();
       setQuiz(json);
     } catch (err) {
